@@ -81,7 +81,7 @@
                         <a class="nav-link botones" href="#">Log in </a>
                     </li>
 					<li>
-						<img class='imagen1'src="daily-farming\cultivos\static\fonts\ionicons\fonts\person-circle-outline.svg" width="30" height="30" class="d-inline-block align-top" alt="User" >
+						<img class='imagen1'src="{%static '\fonts\ionicons\fonts\person-circle-outline.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="User" >
 					</li>
 
                 </ul>
@@ -120,11 +120,11 @@
                   <div class="title"> 
                     <h2 style="font-family: 'Lobster'; ">First function</h2>
                   </div>
-              </div>
+              </div>  
               <!--PERSONALIZADO-->
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="static/images/campo.jpg" alt="imagen">
+                      <img src="{% static 'images/campo.jpg' %}" alt="imagen">
                     </div>
                     <div class="col-md-6 px-5 py-2">
                         <h3 style="font-family: 'Open Sans', sans-serif;">Prueba</h3>
@@ -151,7 +151,7 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="static/images/campo.jpg" alt="imagen1">
+                        <img src="{%static '/images/campo.jpg' %}" alt="imagen1">
                     </div>
                     <div class="col-md-6 px-5 py-2">
                         <h3 style="font-family: 'Open Sans', sans-serif;" >Prueba 2</h3>

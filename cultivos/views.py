@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django import forms
 
-from .models import Requisito
+from .models import Requisito, Cultivo
 
 
 # Create your views here.
@@ -53,3 +53,42 @@ class RequisitoEliminar(SuccessMessageMixin, DeleteView):
         success_message = 'Requisito eliminado correctamente'
         messages.success(self.request, success_message)
         return reverse('leer')
+
+#Views del modelo 'Cultivo'
+class CultivoListado(ListView):
+    model = Cultivo
+
+
+class CultivoCrear(SuccessMessageMixin, CreateView):
+    model = Cultivo
+    form = Cultivo
+    fields = "__all__"
+    success_message = 'Cultivo creado correctamente'
+
+    def get_success_url(self):
+        return reverse('leerC')
+
+
+class CultivoDetalle(DetailView):
+    model = Cultivo
+
+
+class CultivoActualizar(SuccessMessageMixin, UpdateView):
+    model = Cultivo
+    form = Cultivo
+    fields = "__all__"
+    success_message = 'Cultivo actualizado correctamente'
+
+    def get_success_url(self):
+        return reverse('leerC')
+
+
+class CultivoEliminar(SuccessMessageMixin, DeleteView):
+    model = Cultivo
+    form = Cultivo
+    fields = "__all__"
+
+    def get_success_url(self):
+        success_message = 'Cultivo eliminado correctamente'
+        messages.success(self.request, success_message)
+        return reverse('leerC')

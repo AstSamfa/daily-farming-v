@@ -18,12 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from cultivos import views
+from cultivos.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-
+    path('', index),
+    path('cultivo/', CultivoListado.as_view(template_name='cultivo/index.html'), name='leerC'),
+    path('cultivo/crear', CultivoCrear.as_view(template_name='cultivo/crear.html'), name='CrearC'),
+    path('cultivo/detalle/<int:pk>', CultivoDetalle.as_view(template_name='cultivo/detalle.html'), name='detalleC'),
+    path('cultivo/detalle/actualizar/<int:pk>', CultivoActualizar.as_view(template_name='cultivo/actualizar.html'), name='actualizarC'),
+    path('cultivo/detalle/eliminar/<int:pk>', CultivoEliminar.as_view(), name='elimarC'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

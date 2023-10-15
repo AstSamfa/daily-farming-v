@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load bootstrap4 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript jquery='full' %}
+        {% load widget_tweaks %}
+        {% load static %}
+        <title>Cultivos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <link rel="stylesheet" href="{%static 'css/style_header_body.css' %}">
+        <link rel="stylesheet" href="{%static 'css\style_footer.css' %}">
+    </head>
+    <body>
+        <!-- Header L -->
+        <header>
+            <nav class="navbar navbar-expand-lg ">			
+                <div class="navbar-brand" >Daily Farming</div>
+                <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link botones" href="#">Inicio <span class="sr-only">(actual)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link botones" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link botones" href="#">Log out </a>
+                        </li>
+                        <li>
+                            <img class='imagen1'src="static/fonts/ionicons/fonts/person-circle-outline.svg" width="30" height="30" class="d-inline-block align-top" alt="" >
+                        </li>
+    
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Formulario -->
+        <div>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="nombre">Nombre del cultivo</label>
+                    {{ form.nombre|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label for="tipo_alimento">Tipo de alimento</label>
+                    {{ form.tipo_alimento|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label for="tipo_propagacion">Tipo de propagacion</label>
+                    {{ form.tipo_propagacion|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label for="requisito">Requisito</label>
+                    {{ form.requisito|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Cuidado</label>
+                    {{ form.cuidado|add_class:"form-control" }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">Aceptar</button>
+                <a href="./" type="submit" class="btn btn-primary">Cancelar</a>
+            </form>
+        </div>
+
+        <!-- footer L -->
+        <footer class="footer-07">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center">
+						<h2 class="footer-heading"><a href="#" class="logo">Daily farming</a></h2>
+						<p class="menu">
+							<a href="#">Inicio</a>
+							<a href="#">Nosotros</a>
+							<a href="#">Log out</a>
+						</p>
+						<ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"></span></a></li>
+            </ul>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col-md-12 text-center">
+						<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+					  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+        <script src="{%static 'js/jquery.min.js' %}"></script>
+        <script src="{%static 'js/popper.js' %}"></script>
+        <script src="{%static 'js/bootstrap.min.js' %}"></script>
+        <script src="{%static 'js/main.js' %}"></script>
+    </body>
+</html>

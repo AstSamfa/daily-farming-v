@@ -1,0 +1,141 @@
+
+/*header*/
+
+.navbar-brand {
+    color:#44813F;
+    font-weight:lighter;
+    font-family: 'Lobster';
+    font-size: 35px;
+}
+
+.botones{
+    color:rgb(131, 130, 130);
+    font-family: 'Lobster';
+    font-size: 21px;
+    margin-right: 37px;
+}
+
+.botones:hover {
+    color: #000000; /* Cambia el color a rojo (#FF0000) al pasar el mouse */
+}
+
+.imagen1{
+    margin-right: 35px;
+    width: 60px;
+    height: 60px;
+}
+
+/*body*/
+
+.cont-1{
+margin-left: 100px;
+
+}
+
+.cont2 {
+    position: relative;
+  }
+  
+.contenedor-superior {
+    position: absolute;
+    height: 530px;
+    top: -28px;
+    border-radius: 20px 20px ;
+    left: 90px;
+    width: 600px;
+    background-color: rgba(228, 225, 225, 0.25);
+    -webkit-border-radius: 20px 20px ;
+    -moz-border-radius: 20px 20px ;
+    -ms-border-radius: 20px 20px ;
+    -o-border-radius: 20px 20px ;
+}
+  
+
+.cont2{
+    background-color:  rgb(245, 245, 248);
+    height: 380px;
+    border-radius: 50px 50px;
+    -webkit-border-radius: 50px 50px;
+    -moz-border-radius: 50px 50px;
+    -ms-border-radius: 50px 50px;
+    -o-border-radius: 50px 50px;
+}
+
+.daily-titulo{
+    font-family: 'Lobster';
+    color:#44813F;
+    font-weight:lighter;
+    font-size: 55px;
+    text-align: center;
+
+}
+
+#parr-prin{
+    margin-top: 33px;
+    text-align: justify;    
+}
+
+.btn-color{
+    background-color: #E6D325;
+    border-radius: 20px 20px;
+    -webkit-border-radius: 20px 20px;
+    -moz-border-radius: 20px 20px;
+    -ms-border-radius: 20px 20px;
+    -o-border-radius: 20px 20px;
+    width: 240px;
+    height: 50px;
+    color:#fff;
+    font-family: 'Lobster';
+    font-size: 24px;
+}
+
+.btn-color:hover {
+    background-color:#cad33f; 
+}
+
+#botoncito{
+    margin-top:33px;
+    text-align: center;   
+}
+
+  
+.containerimg1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 70px;
+    margin-left: 200px;
+    
+}
+  
+.containerimg2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 120px;
+    margin-left: 140px;
+}
+  
+img {
+    max-width: 200px;
+    height: auto;
+}
+
+  
+.containerimg1 img {
+    margin-top: 45px;
+}
+  
+.containerimg2 img {
+    margin-top: 10px;
+}
+
+.containerimg1 img,
+.containerimg2 img {
+    object-fit: contain;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -ms-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+}

@@ -6,10 +6,15 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django import forms
 
-from models import Requisito
+from .models import Requisito
 
 
 # Create your views here.
+
+#mostrar el contenido de index.html
+def index(request):
+    return render(request,"cultivos/index.html")
+
 
 class RequisitoListado(ListView):
     model = Requisito

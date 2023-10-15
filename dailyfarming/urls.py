@@ -23,6 +23,7 @@ from cultivos import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('funcion/', views.prueba),
 
 ]
 

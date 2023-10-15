@@ -53,3 +53,8 @@ class RequisitoEliminar(SuccessMessageMixin, DeleteView):
         success_message = 'Requisito eliminado correctamente'
         messages.success(self.request, success_message)
         return reverse('leer')
+
+
+
+def prueba(request):
+    return render(request,"cultivos/funciones.html")

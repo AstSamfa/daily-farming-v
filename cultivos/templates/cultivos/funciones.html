@@ -1,0 +1,217 @@
+﻿{% load static %}
+{% load bootstrap4 %}  
+{% bootstrap_css %}
+
+<style>
+
+     main{
+         width: auto;
+         height: auto;
+         display: flex;
+         justify-content: center;
+         background: #d2d2d2f7;
+         border-radius: 20px;
+         margin: 5px;
+     }
+ 
+     .function{
+         margin: 10px;
+     }
+ 
+     .title{
+       border-radius: 15px;
+       width: 250px;
+       height: auto;
+       padding: 20px;
+       color:white;
+       background: #44813F;
+     }
+ 
+     .boton{
+       font-size: 30px; /* Tamaño del texto del botón */
+       padding: 10px 20px;
+       width: auto;
+       height: auto;
+       font-family: 'Lobster';
+       background: #44813F;
+       color: white;
+       display:flex; 
+       justify-content: center;
+       border-radius: 15px;
+     }
+ 
+ </style>
+ 
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Daily farming</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+	
+		<link rel="stylesheet" href="{%static 'css/ionicons.min.css' %}">
+		<link rel="stylesheet" href="{%static 'css\style_footer.css' %}">
+		<link rel="stylesheet" href="{%static 'css/style_header_body.css' %}">
+
+  </head>
+  <body>
+	<header>
+        <nav class="navbar navbar-expand-lg ">			
+            <div class="navbar-brand" >Daily Farming</div>
+            <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link botones" href="#">Inicio <span class="sr-only">(actual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botones" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botones" href="#">Log in </a>
+                    </li>
+					<li>
+						<img class='imagen1'src="daily-farming\cultivos\static\fonts\ionicons\fonts\person-circle-outline.svg" width="30" height="30" class="d-inline-block align-top" alt="User" >
+					</li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+	<!--cuerpo de la pagina-->
+
+    <main>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <!--PERSONALIZADO-->
+
+                <div class="function">
+                    <div class="title"> 
+                      <h2 style="font-family: 'Lobster'; ">Introdution</h2>
+                    </div>
+                </div>
+
+                <!--PERSONALIZADO-->
+
+                <h3 class="px-2 px-6" style="font-family: 'Open Sans', sans-serif;" >Prueba </h3>
+                <h5 class="px-4 py-6" style="font-family: 'Open Sans', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem animi voluptatibus soluta, dolores molestias, distinctio nulla voluptate minima, recusandae veniam commodi ex ullam doloremque sapiente dolor ea ipsam error consectetur? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum nam quibusdam cumque, veniam voluptatem eum impedit asperiores officiis distinctio eius iusto, deleniti rerum ipsa, doloribus debitis. Quis incidunt magni vero. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, facere ea voluptatibus sequi perferendis veniam eligendi aliquid, id cumque voluptas fugiat nemo quod ab ipsum beatae quaerat nihil iusto earum?</h5>
+
+              </div>
+              <div class="carousel-item">
+                <!--PERSONALIZADO-->
+                <div class="function">
+                  <div class="title"> 
+                    <h2 style="font-family: 'Lobster'; ">First function</h2>
+                  </div>
+              </div>
+              <!--PERSONALIZADO-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="static/images/campo.jpg" alt="imagen">
+                    </div>
+                    <div class="col-md-6 px-5 py-2">
+                        <h3 style="font-family: 'Open Sans', sans-serif;">Prueba</h3>
+                        <h5 style="font-family: 'Open Sans', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem animi voluptatibus soluta, dolores molestias, distinctio nulla voluptate minima, recusandae veniam commodi ex ullam doloremque sapiente dolor ea ipsam error consectetur?</h5>
+                        <div class="container mt-5 d-flex justify-content-center">
+                            <!-- Botón de redirección -->
+                            <a href="#" title="Ver" type="button" class="boton">Continue</a>
+                            
+                        </div>
+                    </div>
+                </div>                
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item">
+
+                <!--PERSONALIZADO-->
+                <div class="function"> 
+                  <div class="title">
+                    <h2 style="font-family: 'Lobster'; ">Second function</h2>
+                  </div>
+                </div>
+                <!--PERSONALIZADO-->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="static/images/campo.jpg" alt="imagen1">
+                    </div>
+                    <div class="col-md-6 px-5 py-2">
+                        <h3 style="font-family: 'Open Sans', sans-serif;" >Prueba 2</h3>
+                        <h5 style="font-family: 'Open Sans', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem animi voluptatibus soluta, dolores molestias, distinctio nulla voluptate minima, recusandae veniam commodi ex ullam doloremque sapiente dolor ea ipsam error consectetur?</h5>
+                        <div class="container mt-5 d-flex justify-content-center" >
+                            <!-- Botón de redirección -->
+                            <a href="#" title="Ver" type="button" class="boton">Continue</a>
+                            
+                        </div>
+                    </div>
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+    </main>
+
+    <!--Cuerpo fin-->
+		<footer class="footer-07">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center">
+						<h2 class="footer-heading"><a href="#" class="logo">Daily farming</a></h2>
+						<p class="menu">
+							<a href="#">Inicio</a>
+							<a href="#">Nosotros</a>
+							<a href="#">Log out</a>
+						</p>
+						<ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"></span></a></li>
+            </ul>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col-md-12 text-center">
+						<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+					  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+    <script src="{%static 'js/jquery.min.js' %}"></script>
+    <script src="{%static 'js/popper.js' %}"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <script src="{%static 'js/main.js' %}"></script>
+  </body>
+</html>
+
+{% bootstrap_javascript jquery='full' %} 

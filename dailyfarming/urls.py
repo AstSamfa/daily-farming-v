@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from cultivos.views import *
 
 from cultivos import views
 
@@ -25,6 +26,20 @@ urlpatterns = [
     path('', views.index),
     path('funcion/', views.prueba, name="prueba"),
 
+    #* cultivos - Requisito
+    path('requisito/', RequisitoListado.as_view(template_name = "requisito/index.html"), name='leer'),
+    path('requisito/detalles/<int:pk>', RequisitoDetalle.as_view(template_name = "requisito/detalles.html"), name='detallesRequisito'),
+    
+    #* cultivos - Cuidado
+    path('cuidado/',    CuidadoListado.as_view(template_name = "cuidado/tabla.html"), name='leerCuidado'),
+    path('cuidado/detalles/<int:pk>', CuidadoDetalle.as_view(template_name = "cuidado/detalles.html"), name='detallesCuidado'),
+    
+    #* cultivos - Cultivo
+    path('cultivo/',    CultivoListado.as_view(template_name = "cultivos/tabla.html"), name='leerCultivo'),
+    path('cultivo/detalles/<int:pk>', CultivoDetalle.as_view(template_name = "cultivo/detalles.html"), name='detallesCultivo'), 
+    path('cultivo/crear', CultivoCrear.as_view(template_name = "cultivo/crear.html"), name='crearCultivo'),
+    path('cultivo/editar/<int:pk>', CultivoActualizar.as_view(template_name = "cultivo/actualizar.html"), name='actualizarCultivo'), 
+    path('cultivo/eliminar/<int:pk>', CultivoEliminar.as_view(), name='eliminarCultivo'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

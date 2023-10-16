@@ -1,0 +1,33 @@
+.container001{
+    margin-left: 30px;
+}
+
+h1{
+    color:#44813F;
+    font-weight:lighter;
+    font-family: 'Lobster';
+    font-size: 45px;
+}
+
+.table{
+    margin-left: 30px;
+    text-align: center;
+    width: 40em;
+}
+
+.boton{
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container002{
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.container003{
+    margin-left: 30px;
+}

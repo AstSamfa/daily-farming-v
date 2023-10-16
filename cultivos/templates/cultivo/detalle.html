@@ -52,17 +52,12 @@
             <p><span class="txt_negrita">Tipo de propagacion:</span> <br> {{object.tipo_propagacion}}</p>
         </div>
 
-        <div> <!-- info del registro -->
-            <p><span class="txt_negrita">Creado:</span> <br> {{object.created_at}}</p>
-            <p><span class="txt_negrita">Actualizado:</span> <br> {{object.updated_at}}</p>
-        </div>
-
         <div> <!-- botones -->
-            <a href="../" type="submit" class="btn btn-primary">Volver</a>
 
             <form method="POST" action="eliminar/{{object.id}}">
                 {% csrf_token %}
                 <div class="btn-group">
+                    <a href="../" type="submit" class="btn btn-primary">Volver</a>
                   <a href="actualizar/{{object.id}}" title="Editar" type="button" class="btn btn-primary">Editar </a>
                   <button class="btn btn-danger" onclick="return eliminar();" type="submit">
                     Eliminar

@@ -1,0 +1,168 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Daily farming - REQUISITOS CREAR </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+
+	
+		<link rel="stylesheet" href="{%static 'css/ionicons.min.css' %}">
+		<link rel="stylesheet" href="{%static 'css\style_footer.css' %}">
+		<link rel="stylesheet" href="{%static 'css/style_header_body.css' %}">
+
+    {# Cargamos la librería #} 
+    {% load bootstrap4 %} 
+
+    {# CSS Bootstrap #} 
+    {% bootstrap_css %}
+    {# Widget Tweaks #}
+    {% load widget_tweaks %}
+
+    {# Archivos #}
+    {% load static %}
+</head>
+<body>
+	<header>
+        <nav class="navbar navbar-expand-lg ">			
+            <div class="navbar-brand" >Daily Farming</div>
+            <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link botones" href="#">Inicio <span class="sr-only">(actual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botones" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botones" href="#">Log in </a>
+                    </li>
+					<li>
+						<img class='imagen1'src="../../static/fonts/ionicons/fonts/person-circle-outline.svg" width="30" height="30" class="d-inline-block align-top" alt="" >
+					</li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+	<!--cuerpo de la pagina-->
+		<section class="ftco-section">
+            <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
+            <div class="form-group">
+                <label for="temperatura" class="txt_negrita">Temperatura</label>
+                {{ form.temperatura|add_class:"form-control" }} 
+            </div>
+            <div class="form-group">
+                <label for="humedad" class="txt_negrita">Humedad</label>
+                {{ form.humedad|add_class:"form-control" }}
+            </div>
+			<div class="form-group">
+                <label for="ph_suelo" class="txt_negrita">Ph del suelo</label>
+                {{ form.ph_suelo|add_class:"form-control" }}
+            </div>
+			<div class="form-group">
+                <label for="cantidad_riego" class="txt_negrita">Cantidad riego</label>
+                {{ form.cantidad_riego|add_class:"form-control" }}
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="../../" type="submit" class="btn btn-primary">Cancelar</a>
+            
+        </form>
+		</section>
+		<footer class="footer-07">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center">
+						<h2 class="footer-heading"><a href="#" class="logo">Daily farming</a></h2>
+						<p class="menu">
+							<a href="#">Inicio</a>
+							<a href="#">Nosotros</a>
+							<a href="#">Log in</a>
+						</p>
+						<ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"></span></a></li>
+            </ul>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col-md-12 text-center">
+						<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This footer is made with <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+					  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+    <script src="{%static 'js/jquery.min.js' %}"></script>
+    <script src="{%static 'js/popper.js' %}"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <script src="{%static 'js/main.js' %}"></script>
+
+	<script>
+		// Agrega un evento de clic al botón con ID "botoncito"
+		document.getElementById("botoncito").addEventListener("click", function() {
+		  // Abre el modal con el ID "miModal"
+		    $('#miModal').modal('show');
+		});
+    </script>
+    
+    
+    <!-- Al final del body -->
+    {# JS y jQuery Bootstrap #}
+    {% bootstrap_javascript jquery='full' %} 
+
+</body>
+
+
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="miModalLabel" style="font-family: 'Lobster';">Sing out</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <!--INICIO-->
+		  <form>
+			<!-- Email input -->
+			<div class="form-outline mb-4">
+			  <input type="email" id="form2Example1" class="form-control" style="font-family: 'Open Sans', sans-serif;" />
+			  <label class="form-label" for="form2Example1" style="font-family: 'Open Sans', sans-serif;">Email address</label>
+			</div>
+		  
+			<!-- Password input -->
+			<div class="form-outline mb-4">
+			  <input type="password" id="form2Example2"  style="font-family: 'Open Sans', sans-serif;" class="form-control" />
+			  <label class="form-label" for="form2Example2" style="font-family: 'Open Sans', sans-serif;">Password</label>
+			</div>
+			<!---->
+		  </form>
+
+		  <!--FIN-->
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" style="font-family: 'Lobster'; font-size:larger;" data-dismiss="modal">Cancel</button>
+		  <a href="{% url 'prueba' %}" class="btn btn-secondary" style="font-family: 'Lobster'; background: #44813F; font-size: larger;">Login</a>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+
+</html>

@@ -1,0 +1,23 @@
+{% extends '../base.html' %}
+
+{% block title %} REQUISITOS {% endblock %}
+
+
+{% block content %}
+<h2 class="navbar-brand">REQUISITOS</h2>
+    <a href="crearRequisito" type="button" class="btn btn-primary">Crear</a>
+    <div class="row">
+        <div class="col-9">
+            <div class="row">
+                {% for requisito in object_list %}
+                <div class="col-md-3 col-sm-12 col-lg-4">
+                    <div class="card" style="width: 100%;">
+                        <h5 class="card-title">Temperatura: {{ requisito.temperatura }}°C</h5>
+                        <a href="detalles/{{ requisito.id }}" title="Ver"class="btn-details">VER MÁS</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -17,7 +17,17 @@
          margin-bottom: 50px;
          border: #f8f5f5 1px solid;
      }
- 
+     
+     .target{
+      display: flex;
+      gap: 20px;
+      justify-content:center;
+      width: auto;
+      height: auto;
+      background: #E6D325;
+
+     }
+
      .function{
          margin: 20px;
      }
@@ -108,17 +118,34 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <!--PERSONALIZADO-->
-
                 <div class="function">
                     <div class="title"> 
                       <h3 style="font-family: 'Lobster'; ">Introdution</h3>
                     </div>
                 </div>
 
-                <!--PERSONALIZADO-->
-
-                <h3 class="px-2 px-6" style="font-family: 'Open Sans', sans-serif;" >Prueba </h3>
-                <h6 class="px-4 py-6" style="font-family: 'Open Sans', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem animi voluptatibus soluta, dolores molestias, distinctio nulla voluptate minima, recusandae veniam commodi ex ullam doloremque sapiente dolor ea ipsam error consectetur? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum nam quibusdam cumque, veniam voluptatem eum impedit asperiores officiis distinctio eius iusto, deleniti rerum ipsa, doloribus debitis. Quis incidunt magni vero. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, facere ea voluptatibus sequi perferendis veniam eligendi aliquid, id cumque voluptas fugiat nemo quod ab ipsum beatae quaerat nihil iusto earum?</h6>
+                <div class="container text-center mt-4">
+                  <div class="row d-flex justify-content-center ">
+                      <div class="col-md-4 mb-4">
+                          <div class="card">
+                              <img style="border-radius: 15px;" src="{% static 'images/campo.jpg' %}" class="card-img-top mx-auto px-2 py-2" alt="Imagen 1">
+                              <div class="card-body">
+                                  <h5 style="background: #44813F; color:#ffff; font-family: 'Lobster';" class="card-title">Función</h5>
+                                  <p class="card-text">Texto de la Tarjeta 1.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4 mb-4">
+                          <div class="card">
+                              <img style="border-radius: 15px;" src="{%static '/images/tractor.jpg' %}" class="card-img-top mx-auto px-2 py-2" alt="Imagen 2">
+                              <div class="card-body">
+                                  <h5 style="background: #44813F; color:#ffff; font-family: 'Lobster';"  class="card-title">Funcion 2</h5>
+                                  <p class="card-text">Texto de la Funcion 2.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
               </div>
               <div class="carousel-item">

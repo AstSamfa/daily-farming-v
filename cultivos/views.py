@@ -1,3 +1,5 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -6,7 +8,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django import forms
 
-from .models import Requisito, Cuidado, Cultivo
+from .models import Requisito, Cuidado, Cultivo, Usuario
 
 
 #mostrar el contenido de index.html
@@ -129,6 +131,51 @@ class CultivoEliminar(SuccessMessageMixin, DeleteView):
         success_message = 'Cultivo eliminado exitosamente!'
         messages.success(self.request, success_message)
         return reverse('leerCultivo')
+
+
+class UsuarioListado(LoginRequiredMixin, ListView):
+    model = Requisito
+
+
+class UsuarioCrear(SuccessMessageMixin, CreateView):
+    model = Usuario
+    form = Usuario
+    fields = "__all__"
+    success_message = 'Usuario creado correctamente'
+
+    def get_success_url(self):
+        return reverse('leer_usuario')
+
+
+class UsuarioDetalle(LoginRequiredMixin, DetailView):
+    model = Usuario
+
+
+class UsuarioUctualizar(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
+    model = Requisito
+    form = Usuario
+    fields = "__all__"
+    success_message = 'Usuario actualizado correctamente'
+
+    def get_success_url(self):
+        return reverse('leer_usuario')
+
+
+class UsuarioEliminar(SuccessMessageMixin, LoginRequiredMixin, DeleteView):
+    model = Usuario
+    form = Usuario
+    fields = "__all__"
+
+    def get_success_url(self):
+        success_message = 'Usuario eliminado correctamente'
+        messages.success(self.request, success_message)
+        return reverse('leer_usuario')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.is_active = False
+        self.object.save()
+        return HttpResponseRedirect(self.success_url)
 
 
 def prueba(request):

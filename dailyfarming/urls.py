@@ -29,10 +29,16 @@ urlpatterns = [
     #* cultivos - Requisito
     path('requisito/', RequisitoListado.as_view(template_name = "requisito/index.html"), name='leer'),
     path('requisito/detalles/<int:pk>', RequisitoDetalle.as_view(template_name = "requisito/detalles.html"), name='detallesRequisito'),
+    path('requisito/crearRequisito', RequisitoCrear.as_view(template_name = "requisito/crear.html"), name='crearRequisito'),
+    path('requisito/detalles/editar/<int:pk>', RequisitoActualizar.as_view(template_name = "Requisito/actualizar.html"), name='actualizarRequisito'), 
+    path('requisito/detalles/eliminar/<int:pk>', RequisitoEliminar.as_view(), name='eliminarRequisito'),
     
     #* cultivos - Cuidado
-    path('cuidado/',    CuidadoListado.as_view(template_name = "cuidado/tabla.html"), name='leerCuidado'),
+    path('cuidado/',    CuidadoListado.as_view(template_name = "cuidado/index.html"), name='leerCuidado'),
     path('cuidado/detalles/<int:pk>', CuidadoDetalle.as_view(template_name = "cuidado/detalles.html"), name='detallesCuidado'),
+    path('cuidado/crearCuidado', CuidadoCrear.as_view(template_name = "cuidado/crear.html"), name='crearCuidado'),
+    path('cuidado/detalles/editar/<int:pk>', CuidadoActualizar.as_view(template_name = "Cuidado/actualizar.html"), name='actualizarCultivo'), 
+    path('cuidado/detalles/eliminar/<int:pk>', CuidadoEliminar.as_view(), name='eliminarCuidado'),
     
     #* cultivos - Cultivo
     path('cultivo/',    CultivoListado.as_view(template_name = "cultivos/tabla.html"), name='leerCultivo'),

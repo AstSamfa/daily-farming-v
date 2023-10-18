@@ -9,9 +9,13 @@
          height: auto;
          display: flex;
          justify-content: center;
-         background: #d2d2d2d2;
-         border-radius: 20px;
-         margin: 25px;
+         background: #f5f3f3;
+         border-radius: 15px;
+         margin: 10px;
+         
+         margin-top: 50px;
+         margin-bottom: 50px;
+         border: #f8f5f5 1px solid;
      }
  
      .function{
@@ -19,11 +23,14 @@
      }
  
      .title{
-       border-radius: 15px;
+      display: flex;
+      justify-content: center;
+       border-radius: 50px;
        width: 250px;
        height: auto;
-       padding: 20px;
-       color:white;
+       padding: 10px;
+       font-size: 10px;
+       color:rgb(0, 0, 0);
        background: #E6D325;
      }
  
@@ -92,8 +99,8 @@
 
     <main>
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+        <div style="color: black;" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol  class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -104,7 +111,7 @@
 
                 <div class="function">
                     <div class="title"> 
-                      <h2 style="font-family: 'Lobster'; ">Introdution</h2>
+                      <h3 style="font-family: 'Lobster'; ">Introdution</h3>
                     </div>
                 </div>
 
@@ -118,13 +125,13 @@
                 <!--PERSONALIZADO-->
                 <div class="function">
                   <div class="title"> 
-                    <h2 style="font-family: 'Lobster'; ">First function</h2>
+                    <h3 style="font-family: 'Lobster'; ">First function</h3>
                   </div>
               </div>  
               <!--PERSONALIZADO-->
                 <div class="row">
                     <div class="col-md-5 px-3 py-3 d-flex justify-content-center">
-                      <img src="{% static 'images/campo.jpg' %}" style="border-radius: 15px;" alt="imagen">
+                      <img src="{% static 'images/campo.jpg' %}" style="border-radius: 5px;" alt="imagen">
                     </div>
                     <div class="col-md-6 px-5 py-2">
                         <h3 style="font-family: 'Open Sans', sans-serif;">Prueba</h3>
@@ -144,14 +151,14 @@
                 <!--PERSONALIZADO-->
                 <div class="function"> 
                   <div class="title">
-                    <h2 style="font-family: 'Lobster'; ">Second function</h2>
+                    <h3 style="font-family: 'Lobster'; ">Second function</h3>
                   </div>
                 </div>
                 <!--PERSONALIZADO-->
 
                 <div class="row">
                     <div class="col-md-5 px-3 py-3 d-flex justify-content-center">
-                        <img src="{%static '/images/tractor.jpg' %}" style="border-radius: 15px;" alt="imagen1">
+                        <img src="{%static '/images/tractor.jpg' %}" style="border-radius: 5px;" alt="imagen1">
                     </div>
                     <div class="col-md-6 px-5 py-2">
                         <h3 style="font-family: 'Open Sans', sans-serif;" >Prueba 2</h3>

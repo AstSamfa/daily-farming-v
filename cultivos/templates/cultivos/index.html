@@ -31,7 +31,7 @@
                         <a class="nav-link botones" href="#">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link botones" href="#">Log in </a>
+                        <a class="nav-link botones" id="boton" href="#">Log in </a>
                     </li>
 					<li>
 						<img class='imagen1'src="static/fonts/ionicons/fonts/person-circle-outline.svg" width="30" height="30" class="d-inline-block align-top" alt="" >
@@ -118,21 +118,79 @@
 
 	<script>
 		// Agrega un evento de clic al botón con ID "botoncito"
-		document.getElementById("botoncito").addEventListener("click", function() {
+		document.getElementById("boton").addEventListener("click", function() {
 		  // Abre el modal con el ID "miModal"
 		  $('#miModal').modal('show');
 		});
+
+		// Agrega un evento de clic al botón con ID "botoncito"
+		document.getElementById("botoncito").addEventListener("click", function() {
+			// Abre el modal con el ID "miModal"
+			$('#miModal2').modal('show');
+		  });
+
 	  </script>
 	  
 
   </body>
 
+<!---CREAR SESIÓN-->
+<div class="modal fade" id="miModal2" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h4 class="modal-title" id="miModalLabel" style="font-family: 'Lobster';">Sign up</h4>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <!--INICIO-->
+		  <form>
+		  
+			<div class="form-outline mb-4">
+				<label class="form-label" for="form2Example3" style="font-family: 'Open Sans', sans-serif;">Nombre</label>
+				<input type="Nombre" id="form2Example3"  style="font-family: 'Open Sans', sans-serif;" class="form-control"/>
+			  </div>
+			
+			  <div class="form-outline mb-4">
+				<label class="form-label" for="form2Example4" style="font-family: 'Open Sans', sans-serif;">Apellido</label>
+				<input type="Apellidos" id="form2Example4"  style="font-family: 'Open Sans', sans-serif;" class="form-control" />
+			  </div>
 
+			  <!----
+			  <div class="form-outline mb-4">
+				<label class="form-label" for="form2Example5" style="font-family: 'Open Sans', sans-serif;">Nickname</label>
+				<input type="Usuario" id="form2Example5"  style="font-family: 'Open Sans', sans-serif;" class="form-control"/>
+			  </div>
+			-->
+			<div class="form-outline mb-4">
+				<label class="form-label" for="form2Example1" style="font-family: 'Open Sans', sans-serif;">Email address</label>
+				<input type="email" id="form2Example1" class="form-control" style="font-family: 'Open Sans', sans-serif;"/>
+			  </div>
+			
+			  <div class="form-outline mb-4">
+				<label class="form-label" for="form2Example2" style="font-family: 'Open Sans', sans-serif;">Password</label>
+				<input type="password" id="form2Example2"  style="font-family: 'Open Sans', sans-serif;" class="form-control"/>
+			  </div>
+		  </form>
+
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" style="font-family: 'Lobster'; font-size:larger;" data-dismiss="modal">Cancel</button>
+		  <a href="{% url 'prueba' %}" class="btn btn-secondary" style="font-family: 'Lobster'; background: #44813F; font-size: larger;">Get Started</a>
+		</div>
+	  </div>
+	</div>
+  </div>
+<!--CREAR SESIÓN FIN-->
+
+<!--INICIO SESIÓN-->
 <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 	  <div class="modal-content">
 		<div class="modal-header">
-		  <h5 class="modal-title" id="miModalLabel" style="font-family: 'Lobster';">Sing out</h5>
+		  <h4 class="modal-title" id="miModalLabel" style="font-family: 'Lobster';">Member Login</h4>
 		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		  </button>
@@ -142,40 +200,17 @@
 		  <form>
 			<!-- Email input -->
 			<div class="form-outline mb-4">
+				<label class="form-label" for="form2Example1" style="font-family: 'Open Sans', sans-serif;">Email address</label>
 			  <input type="email" id="form2Example1" class="form-control" style="font-family: 'Open Sans', sans-serif;" />
-			  <label class="form-label" for="form2Example1" style="font-family: 'Open Sans', sans-serif;">Email address</label>
 			</div>
 		  
 			<!-- Password input -->
 			<div class="form-outline mb-4">
+				<label class="form-label" for="form2Example2" style="font-family: 'Open Sans', sans-serif;">Password</label>
 			  <input type="password" id="form2Example2"  style="font-family: 'Open Sans', sans-serif;" class="form-control" />
-			  <label class="form-label" for="form2Example2" style="font-family: 'Open Sans', sans-serif;">Password</label>
+			  
 			</div>
 		  
-			<!-- Submit button --
-			<button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-			<!---->
-			<!-- Register buttons --
-			<div class="text-center">
-			  <p>Not a member? <a href="#!">Register</a></p>
-			  <p>or sign up with:</p>
-			  <button type="button" class="btn btn-link btn-floating mx-1">
-				<i class="fab fa-facebook-f"></i>
-			  </button>
-		  
-			  <button type="button" class="btn btn-link btn-floating mx-1">
-				<i class="fab fa-google"></i>
-			  </button>
-		  
-			  <button type="button" class="btn btn-link btn-floating mx-1">
-				<i class="fab fa-twitter"></i>
-			  </button>
-		  
-			  <button type="button" class="btn btn-link btn-floating mx-1">
-				<i class="fab fa-github"></i>
-			  </button>
-			</div>
-			<!---->
 		  </form>
 
 		  <!--FIN-->
